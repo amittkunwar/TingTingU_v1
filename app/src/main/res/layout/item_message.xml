@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/left_chat"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+
+        <TextView
+            android:id="@+id/left_text"
+            android:layout_width="176dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/sent_message_back"
+            android:fontFamily="@font/robo"
+
+
+            android:padding="10dp"
+            android:text="Hello How are you"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="150dp" />
+
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/robo2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="134dp" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/right_chat"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        <TextView
+            android:id="@+id/right_text"
+            android:layout_width="176dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="236dp"
+            android:background="@drawable/sent_message_back"
+            android:fontFamily="@font/robo"
+
+
+            android:padding="10dp"
+            android:text="Hello How are you"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <ImageView
+        android:id="@+id/right_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="380dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705"
+        app:srcCompat="@drawable/me"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

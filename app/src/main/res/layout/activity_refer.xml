@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Refer"
+    android:layout_gravity="center_vertical"
+    android:background="@color/lavander"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="47dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="268dp"
+        android:src="@drawable/dot_arrow" />
+
+    <FrameLayout
+        android:id="@+id/top_box_container"
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:background="@drawable/hometop"
+        >
+
+        <ImageView
+            android:layout_width="316dp"
+            android:layout_height="172dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/earn" />
+
+        <TextView
+            android:layout_width="151dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/top_box_container"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gb"
+            android:maxLines="2"
+            android:text="Refer and earn"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="151dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/top_box_container"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gb"
+            android:maxLines="2"
+            android:text="TTU Coins"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/back_1"
+            android:layout_width="49dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+
+            android:src="@drawable/back_1"
+            />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="278dp"
+        android:src="@drawable/invite" />
+
+    <ImageView
+        android:layout_width="47dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="268dp"
+        android:src="@drawable/dot_arrow" />
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="277dp"
+        android:src="@drawable/coins" />
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="265dp"
+        android:layout_marginTop="278dp"
+        android:src="@drawable/withdraw" />
+
+    <TextView
+        android:layout_width="68dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="343dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Invite your friend"
+
+
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="341dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="You Earn"
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="355dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="10 TTU"
+        android:textAlignment="center"
+        android:textColor="#ff99cc"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="366dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Coins"
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="341dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Friend Earn"
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="354dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="11 TTU"
+        android:textAlignment="center"
+        android:textColor="#ff99cc"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="368dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Coins"
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="323dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="414dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="When you refer your friends, coins will be credited to both account"
+        android:textAlignment="center"
+        android:textColor="#ff99cc"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="177dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="482dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Your Referral Code"
+        android:textAlignment="center"
+        android:textColor="#818589"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:layout_width="309dp"
+        android:layout_height="34dp"
+
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="515dp"
+        android:src="@drawable/referal_box" />
+
+    <TextView
+        android:id="@+id/referral_code_text"
+        android:layout_width="177dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="523dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="AK6969"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tap_to_copy_button"
+        android:layout_width="132dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="565dp"
+        android:fontFamily="@font/gb"
+        android:maxLines="2"
+        android:text="Tap To Copy"
+        android:textAlignment="center"
+        android:textColor="#ff99cc"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/refer_now_button"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="73dp"
+        android:backgroundTint="#7E57C2"
+        android:fontFamily="@font/gb"
+        android:padding="12dp"
+        android:text="Refer Now"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

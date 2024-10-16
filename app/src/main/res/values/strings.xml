@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">tingtingu_v1</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Chinese</item>
+        <item>Hindi</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

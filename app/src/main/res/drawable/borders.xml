@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- dropshadow layer 1 -->
+    <item>
+        <shape>
+            <solid android:color="#10CCCCCC" />
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+    <!-- dropshadow layer 2 -->
+    <item>
+        <shape>
+            <solid android:color="#20CCCCCC" />
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+    <!-- dropshadow layer 3 -->
+    <item>
+        <shape>
+            <solid android:color="#40CCCCCC" />
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+    <!-- dropshadow layer 4 -->
+    <item>
+        <shape>
+            <solid android:color="#50CCCCCC" />
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+    <!-- dropshadow layer 5 -->
+    <item>
+        <shape>
+            <solid android:color="#60CCCCCC" />
+            <padding android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+    <!-- content background -->
+    <item>
+        <shape>
+            <solid android:color="#ffffff" />
+            <!-- More rounded corners -->
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+
+</layer-list>
