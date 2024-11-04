@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:src="@drawable/maleuser"
+
+         />
+
+    <!-- Text Layout for Name and Last Message -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="12dp">
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userNameList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amit Kunwar"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <!-- Last Message -->
+        <TextView
+            android:id="@+id/lastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last message"
+            android:textSize="13sp"
+            android:textColor="#5A5A5A" />
+    </LinearLayout>
+</LinearLayout>

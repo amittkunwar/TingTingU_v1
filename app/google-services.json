@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "599721209756",
+    "project_id": "tingtingu-v1",
+    "storage_bucket": "tingtingu-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599721209756:android:b2cd556e1ded08a016e259",
+        "android_client_info": {
+          "package_name": "com.example.tingtingu_v1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxrK6ZXSXMnnLQ8uaL0ocXC4lL3KammZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

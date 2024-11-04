@@ -66,6 +66,10 @@ public class HomeFragment extends Fragment {
         ImageView inviteUserIcon = view.findViewById(R.id.invite_user);
         inviteUserIcon.setOnClickListener(v -> openReferActivity());
 
+        // Find the message icon (msg) and set click listener to navigate to main_msg fragment
+        ImageView msgIcon = view.findViewById(R.id.msg);  // Your message icon
+        msgIcon.setOnClickListener(v -> openMainMsgFragment()); // Call the method to open main_msg fragment
+
         return view; // Return the inflated view
     }
 
@@ -90,7 +94,7 @@ public class HomeFragment extends Fragment {
         transaction.commit();
     }
 
-    // Method to open WebFragment (add your logic here)
+    // Method to open WebFragment
     private void openWebFragment() {
         Fragment webFragment = new WebFragment();
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
@@ -103,6 +107,15 @@ public class HomeFragment extends Fragment {
     private void openReferActivity() {
         Intent intent = new Intent(getActivity(), Refer.class); // Replace ReferActivity with the actual class name of your refer activity
         startActivity(intent);
+    }
+
+    // Method to open main_msg Fragment
+    private void openMainMsgFragment() {
+        Fragment mainMsgFragment = new main_msg();
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, mainMsgFragment); // Ensure you replace the correct container
+        transaction.addToBackStack(null); // Optional: add to back stack
+        transaction.commit();
     }
 
     @Override

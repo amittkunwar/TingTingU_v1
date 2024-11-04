@@ -1,10 +1,15 @@
 package com.example.tingtingu_v1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;  // Added for logging
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -23,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+
+    private static final String PREFS_NAME = "user_session";
+    private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+
+    private boolean doubleBackToExitPressedOnce = false;  // To track back press
+    private Handler backPressHandler = new Handler(Looper.getMainLooper());  // To handle back press timing
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.navMenu5) {
                 selectedFragment = new ProfileFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navProfile);
+            } else if (item.getItemId() == R.id.navMenu6) {
+                // Logout functionality when navMenu6 is clicked
+                logoutUser();
+                return true;
             }
 
             // Load the selected fragment if it's not null
@@ -96,40 +111,49 @@ public class MainActivity extends AppCompatActivity {
         TextView searchBar = findViewById(R.id.search_bar);
 
         // Set the onClick listener to the TextView (acting as the search bar)
-        searchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Log the action for debugging
-                Log.d("MainActivity", "Search bar clicked. Navigating to Search activity");
+        searchBar.setOnClickListener(v -> {
+            // Log the action for debugging
+            Log.d("MainActivity", "Search bar clicked. Navigating to Search activity");
 
-                // Create an Intent to navigate to the new SearchActivity
-                Intent intent = new Intent(MainActivity.this, Search.class);
-                startActivity(intent);
-            }
+            // Create an Intent to navigate to the new SearchActivity
+            Intent intent = new Intent(MainActivity.this, Search.class);
+            startActivity(intent);
         });
     }
 
     @Override
     public void onBackPressed() {
         // Check if the drawer is open
+        super.onBackPressed();
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             // Close the drawer if it's open
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            // Check if the current fragment is NOT HomeFragment
             Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+
+            // Check if the current fragment is NOT HomeFragment
             if (!(currentFragment instanceof HomeFragment)) {
                 // Load the HomeFragment and set the bottom navigation to Home
                 loadFragment(new HomeFragment(), false);
                 bottomNavigationView.setSelectedItemId(R.id.navHome);
             } else {
-                // Show exit confirmation dialog
-                new AlertDialog.Builder(this)
-                        .setMessage("Do you want to exit the app?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", (dialog, id) -> finishAffinity())
-                        .setNegativeButton("No", null)
-                        .show();
+                // If user presses back once, show a toast
+                if (doubleBackToExitPressedOnce) {
+                    // If back is pressed twice within 2 seconds, show exit confirmation dialog
+                    new AlertDialog.Builder(this)
+                            .setMessage("Do you want to exit the app?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", (dialog, id) -> finishAffinity())
+                            .setNegativeButton("No", null)
+                            .show();
+                } else {
+                    // First back press: Show a toast message
+                    doubleBackToExitPressedOnce = true;
+                    Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+
+                    // Reset the double back press flag after 2 seconds
+                    backPressHandler.postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
+                }
             }
         }
     }
@@ -150,5 +174,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         fragmentTransaction.commit();
+    }
+
+    // Method to log out the user
+    private void logoutUser() {
+        // Clear the session data from SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();  // Clear all saved data
+        editor.apply();
+
+        // Redirect the user to the firstpage
+        Intent intent = new Intent(MainActivity.this, firstpage.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear the back stack
+        startActivity(intent);
+        finish();  // Close the MainActivity
     }
 }

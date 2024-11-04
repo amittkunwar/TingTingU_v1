@@ -13,6 +13,11 @@ constraintlayout = "2.1.4"
 roundedimageview = "2.3.0"
 viewpager2 = "1.1.0"
 xreactiveStreams = "1.0.4"
+googleGmsGoogleServices = "4.4.2"
+firebaseStorage = "21.0.1"
+firebaseFirestore = "25.1.1"
+firebaseDatabase = "21.0.0"
+firebaseAuth = "23.1.0"
 
 [libraries]
 autoimageslider = { module = "com.github.smarteist:autoimageslider", version.ref = "autoimageslider" }
@@ -29,7 +34,12 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 roundedimageview = { module = "com.makeramen:roundedimageview", version.ref = "roundedimageview" }
 viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 xreactive-streams = { module = "org.reactivestreams: reactive-streams", version.ref = "xreactiveStreams" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

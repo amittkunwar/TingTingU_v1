@@ -30,6 +30,12 @@
         android:title="Profile"
 
         />
+    <item
+        android:icon="@drawable/logout"
+        android:id="@+id/navMenu6"
+        android:title="Logout"
+
+        />
 
 
 </menu>

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/navHome"
         android:icon="@drawable/home"
-       /> <!-- Added title -->
+       />
 
     <item
         android:id="@+id/navSettings"
